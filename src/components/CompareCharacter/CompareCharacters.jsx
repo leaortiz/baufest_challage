@@ -1,5 +1,5 @@
 import React from "react";
-import CardList, { CompareCharacter } from "../Card/CardList";
+import CardList, { CompareCharacter } from "../CardList/CardList";
 
 export default function CompareCharacters({ data }) {
   const computeSharedEpisodes = () => {

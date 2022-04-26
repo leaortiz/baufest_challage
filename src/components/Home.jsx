@@ -5,7 +5,7 @@ import CardList, {
   CharacterCard,
   EpisodeCard,
   LocationCard,
-} from "./Card/CardList";
+} from "./CardList/CardList";
 import {
   getCharacterPage,
   getCharactersToCompare,

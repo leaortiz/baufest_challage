@@ -118,26 +118,8 @@ export const LocationCard = ({ data }) => {
   );
 };
 
-/**
- * 
- * @param {air_date: "May 17, 2020"
-characters: (21) ['https://rickandmortyapi.com/api/character/1', 'https://rickandmortyapi.com/api/character/2', 'https://rickandmortyapi.com/api/character/4', 'https://rickandmortyapi.com/api/character/3', 'https://rickandmortyapi.com/api/character/5', 'https://rickandmortyapi.com/api/character/240', 'https://rickandmortyapi.com/api/character/180', 'https://rickandmortyapi.com/api/character/648', 'https://rickandmortyapi.com/api/character/649', 'https://rickandmortyapi.com/api/character/650', 'https://rickandmortyapi.com/api/character/651', 'https://rickandmortyapi.com/api/character/652', 'https://rickandmortyapi.com/api/character/653', 'https://rickandmortyapi.com/api/character/654', 'https://rickandmortyapi.com/api/character/655', 'https://rickandmortyapi.com/api/character/656', 'https://rickandmortyapi.com/api/character/657', 'https://rickandmortyapi.com/api/character/658', 'https://rickandmortyapi.com/api/character/659', 'https://rickandmortyapi.com/api/character/660', 'https://rickandmortyapi.com/api/character/661']
-created: "2020-08-06T05:51:07.419Z"
-episode: "S04E08"
-id: 39
-name: "The Vat of Acid Episode"
-url: "https://rickandmortyapi.com/api/episode/39"} param0 
- * @returns 
- */
-
 export const EpisodeCard = ({
   data,
-  onNextClick,
-  onPrevClick,
-  children,
-  results,
-  pagination = true,
-  charactersData,
   setEpisodeIds,
   characters,
 }) => {
@@ -190,7 +172,7 @@ export const CompareCharacter = ({ data }) => {
     <div key={data.id} className="card-wrapper">
       <div className="card">
         <div className="card-details">
-          <p>Name: {data.name}</p>
+          <h2>Name: {data.name}</h2>
           <p>Gender: {data.gender}</p>
           <p>Location: {data.location.name}</p>
           <p>Species: {data.species}</p>
@@ -204,7 +186,6 @@ export const CompareCharacter = ({ data }) => {
           </Button>
           <h2>Shared Episodes:</h2>
           {
-            //e.episodes contains the full list...
             data.sharedEpisodes.map((e) => (
               <p key={"shared-episode-" + e.name}>
                 {e.name}: {e.sharedEpisodes}

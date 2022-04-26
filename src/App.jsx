@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./App.css";
 import "semantic-ui-css/semantic.min.css";
 import { Grid } from "semantic-ui-react";
@@ -9,13 +9,13 @@ import { getCharacterPage } from "./store/characters/characterSlice";
 import { getLocationPage } from "./store/locations/locationSlice";
 import { getEpisodePage } from "./store/episodes/episodeSlice";
 import { useDispatch } from "react-redux";
+import Header from "./components/Header";
 
-const api = 'https://rickandmortyapi.com/api/';
+const api = "https://rickandmortyapi.com/api/";
 
 function App() {
-
   const dispatch = useDispatch();
-  const [ searchFilter, setSearchFilter ] = useState("");
+  const [searchFilter, setSearchFilter] = useState("");
 
   useEffect(() => {
     dispatch(getCharacterPage(`${api}character/?name=${searchFilter}`));
@@ -24,11 +24,19 @@ function App() {
   }, [searchFilter]);
 
   return (
+    <div style={{margin: "0 2%"}}>
     <Grid>
-      <Grid.Row></Grid.Row>
       <Grid.Row>
         <Grid.Column>
-          <Search onFilterChange={setSearchFilter} searchFilter={searchFilter}/>
+          <Header />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Search
+            onFilterChange={setSearchFilter}
+            searchFilter={searchFilter}
+          />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
@@ -37,6 +45,7 @@ function App() {
         </Grid.Column>
       </Grid.Row>
     </Grid>
+    </div>
   );
 }
 
