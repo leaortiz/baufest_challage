@@ -1,0 +1,22 @@
+.spinner {
+    position: fixed;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+  
+    &.accordion-spinner {
+      position: relative;
+      top: 0;
+      left: 30%;
+  
+      > img {
+        width: 15%;
+        padding: .5rem;
+      }
+    }
+  }
+  
+  
+  
+  
+  
