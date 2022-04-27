@@ -6,7 +6,6 @@ import { Button, Modal } from "semantic-ui-react";
 import { characterActions } from "../../store/characters/characterSlice";
 import { useDispatch, useSelector } from "react-redux";
 import getIdFromUrl from "../../utilities/getIdFromUrl";
-import { getCharactersToCompare } from "../../store/characters/characterSlice";
 
 const randomFromArray = (array) =>
   array[Math.floor(Math.random() * array.length)];
